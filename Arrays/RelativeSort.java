@@ -4,7 +4,7 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-//In CustomComparartot use everything wrt Objects i.e use Wrapper Classes of Primitive Types
+//In CustomComparartor use everything wrt Objects i.e use Wrapper Classes of Primitive Types
 
 class CustomComparator implements Comparator<Integer>{
     Map<Integer,Integer> hm; 
@@ -15,13 +15,13 @@ class CustomComparator implements Comparator<Integer>{
     @Override
     public int compare(Integer A,Integer B) {
         if (hm.containsKey(A) && hm.containsKey(B))
-            return hm.get(A)-hm.get(B);
+		return hm.get(A)-hm.get(B);
         else if (hm.containsKey(A))
-			return -1;
-		else if (hm.containsKey(B))
-			return 1;
-		else
-			return A - B;
+		return -1;
+	else if (hm.containsKey(B))
+		return 1;
+	else
+		return A - B;
     }
 }
 class RelativeSort {
@@ -42,19 +42,17 @@ class RelativeSort {
 		    Integer b[] = new Integer[N];
 		    for (int i=0; i<N; i++)
 		        b[i] = sc.nextInt();
-		    
+			
+		    System.out.println("Original array to be sorted: "+Arrays.toString(a));
+		    System.out.println("Relative array: "+Arrays.toString(b));
 		    Map<Integer,Integer> hm = new HashMap<Integer,Integer>();
 		    for (int i=0; i<N; i++)
 		        hm.put(b[i],i);
 		        
 		    Arrays.sort(a, new CustomComparator(hm));
-		    
-		    for (int i=0; i<M; i++)
-		        System.out.print(a[i]+" ");
-		    System.out.println();
+		    System.out.println("Sorted array: "+Arrays.toString(a));
 		  
 		}
-		
-		
+				
 	}
 }
