@@ -2,7 +2,9 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
  
-class Ideone {
+//Sort array by frequency and then by increasing order
+
+class FrequencySort {
  
     static class Pair {
         int c;
