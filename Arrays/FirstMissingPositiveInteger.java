@@ -20,7 +20,7 @@ class FirstMissingPositiveInteger
                 if (nums[index] == nums[currentValue-1]) {
                     break;
                 }
-				        System.out.println("Before moving nums["+index+"] : "+currentValue+" to correct position in "+Arrays.toString(nums));
+		System.out.println("Before moving nums["+index+"] : "+currentValue+" to correct position in "+Arrays.toString(nums));
                 nums[index] = nums[currentValue-1];
                 nums[currentValue-1] = currentValue;
                 System.out.println("After moving nums["+index+"] : "+currentValue+" to correct position in "+Arrays.toString(nums));
