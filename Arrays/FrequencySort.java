@@ -57,10 +57,10 @@ class FrequencySort {
 
           for (Map.Entry e : llist) {
             for (int i=1; i<= (Integer)e.getValue(); i++)
-            System.out.print(e.getKey()+" ");
+            	System.out.print(e.getKey()+" ");
           }
           
           System.out.println();
-	      }
-     }
+	}
+    }
 }
